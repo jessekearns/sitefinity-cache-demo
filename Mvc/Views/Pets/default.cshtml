@@ -1,0 +1,12 @@
+﻿@using SitefinityWebApp.Mvc.Models
+
+@model PetCollectionViewModel
+
+<span><b>Pets with tag: @Model.TagName</b></span><br />
+<span>@Model.TimeInfo</span><br />
+@foreach(var pet in Model.Pets)
+{
+    <div style="width:31%; margin:1%; display:inline-block;"><img src=@pet.ImageUrl />
+    	<h4 style="width:100%; font-size:19px; font-weight:bold; display:block; text-align:center;">@pet.Name</h4>
+    </div>
+}

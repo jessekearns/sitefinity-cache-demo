@@ -1,0 +1,9 @@
+﻿@using Telerik.Sitefinity.UI.MVC;
+
+<span>Delete all pet data and generate new pets with random images and tags</span><br />
+
+@using (Html.BeginFormSitefinity("Generate", "Generate", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <input type="number" name="RequestedPets" value="10" />
+    <input type="submit" name="Submit" id="Submit" value="Generate" />
+}
